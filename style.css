@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    border: 1px dotted rgb(142, 142, 142);
+    height: 30rem;
+    width: 25rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    backdrop-filter: blur(30px);
+    background-color: rgba(117, 117, 117, 0.3);
+}
+
+.user-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.position {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(206, 206, 206);
+}
+
+.btn-container button {
+    height: 38px;
+    width: 147px;
+    margin-left: 8px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: transparent;
+    color: white;
+}
+
+.btn-container button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+.red-circle {
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    top: 25px;
+    left: -60px;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    border: 2px solid #d84869;
+    animation-name: redcircle;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 9s;
+
+}
+
+@keyframes redcircle {
+    50% {
+        transform: translate(34px, 24px) scale(1.05);
+    }
+}
+
+.blue-circle {
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 0;
+    border: 2px solid #5648d8;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation-name: bluecircle;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 7s;
+}
+
+@keyframes bluecircle {
+    50% {
+        transform: translate(15px, -15px);
+    }
+}
+
+/* open box share css part  */
+.share-profile {
+    color: white;
+    border: 2px solid rgba(187, 187, 187, 0.5);
+    border-radius: 15px;
+    height: 270px;
+    width: 600px;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.abc {
+    transform: scale(1);
+}
+
+.share-profile-heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgb(166, 166, 166);
+    padding-bottom: 1rem;
+}
+
+.share-profile-heading button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.share-profile-heading i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.share-profile-heading h2 {
+    font-size: 2rem;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media-icons i {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#facebook {
+    padding-left: 1.3rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.8rem;
+    padding-right: 1.3rem;
+    border: 1px solid #0165E1;
+    color: #0165E1;
+}
+
+#facebook:hover {
+    background-color: #0165E1;
+    color: white;
+}
+
+#twitter {
+    border: 1px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+#twitter:hover {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+#instagram {
+    border: 1px solid #833AB4;
+    color: #833AB4;
+}
+
+#instagram:hover {
+    background-color: #833AB4;
+    color: white;
+}
+
+#telegram {
+    border: 1px solid #0088cc;
+    color: #0088cc;
+}
+
+#telegram:hover {
+    background-color: #0088cc;
+    color: white;
+}
+
+#whatsapp {
+    border: 1px solid #25D366;
+    color: #25D366;
+}
+
+#whatsapp:hover {
+    background-color: #25D366;
+    color: white;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(97, 97, 97, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transform: scale(0);
+}
+.xyz{
+    transform: scale(1);
+}
+@media (max-width: 600px) {
+    .share-profile{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .social-media-icons {
+        flex-wrap: wrap;
+    }
+
+}

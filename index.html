@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Model</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- main content container html  -->
+        <div class="container">
+            <div class="card-container">
+                <div>
+                    <img src="amit-model.JPG" alt="" class="user-image">
+                </div>
+                <div class="user-name">
+                    <h2>Amit Ranjan</h2>
+                </div>
+                <div class="position">
+                    <h3>Founder, Foolish Coder</h3>
+                </div>
+                <div class="btn-container">
+                    <button class="share" onclick="openSharefun()">
+                        <i class="fa-solid fa-share"></i>
+                        Share My Profile
+                    </button>
+                    <button class="follow-me">
+                        Follow Me
+                    </button>
+                </div>
+            </div>
+            <div class="red-circle"></div>
+            <div class="blue-circle"></div>
+        </div>
+
+        <!-- share box html code  -->
+        <div class="share-profile" id="shareprofile-container">
+            <div class="share-profile-heading">
+                <h2>Share My Profile</h2>
+                <button onclick="removeShareFun()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="share-via">
+                <h3>Share this via</h3>
+            </div>
+            <div class="social-media-icons">
+                <i class="fa-brands fa-facebook-f" id="facebook"></i>
+                <i class="fa-brands fa-twitter" id="twitter"></i>
+                <i class="fa-brands fa-instagram" id="instagram"></i>
+                <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+                <i class="fa-brands fa-telegram" id="telegram"></i>
+            </div>
+        </div>
+
+
+        <div class="overlay" onclick="removeShareFun()">
+
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
